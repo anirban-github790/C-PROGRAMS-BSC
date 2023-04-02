@@ -1,0 +1,2 @@
+command line
+on the merge two files

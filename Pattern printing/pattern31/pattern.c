@@ -1,0 +1,64 @@
+#include<stdio.h>
+void main()
+{
+	int n,line,cha,bla=1,spa=1;
+	printf("Enter line:");
+	scanf("%d",&n);
+	for(line=n;line>=1;line--)
+	{
+		if(line!=n)
+		{
+			for(cha=1;cha<=line;cha++)
+		 	{
+				printf("*");
+			}
+			for(bla=1;bla<=spa;bla++)
+			{
+				printf(" ");
+			}
+			for(cha=1;cha<=line;cha++)
+			{
+				printf("*");
+			}
+			spa=spa+2;
+		}
+		else
+		{
+			for(cha=1;cha<=2*line-1;cha++)
+			{
+				printf("*");
+			}
+		}
+		printf("\n");
+	}
+	bla=1;
+	for(line=1;line<=n-1;line++,bla=bla+2);
+	bla=bla-2;
+	for(line=1;line<=n;line++)
+	{
+		if(line!=n)
+		{
+			for(cha=1;cha<=line;cha++)
+			{
+				printf("*");
+			}
+			for(spa=1;spa<=bla;spa++)
+			{
+				printf(" ");
+			}
+			for(cha=1;cha<=line;cha++)
+			{
+				printf("*");
+			}
+		}
+		else
+		{
+			for(cha=1;cha<=2*n-1;cha++)
+			{
+				printf("*");
+			}
+		}
+		bla=bla-2;
+		printf("\n");
+	}
+}

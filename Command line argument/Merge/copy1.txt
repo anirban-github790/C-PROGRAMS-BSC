@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<process.h>
+void main(int argc,char *argv[])
+{
+	FILE *fp1,*fp2;
+	char ch;
+	fp1=fopen(argv[1],"r");
+	fp2=fopen(argv[2],"w");
+	if(fp1==NULL)
+	{
+		printf("no such file exists\n");
+		exit(0);
+	}
+	if(argc!=3)
+	{
+		printf("Exactly three arguments are needed\n");
+		exit(0);
+	}
+	while((ch=fgetc(fp1))!=EOF)
+	{
+		fprintf(fp2,"%c",ch);
+	}
+	printf("Done\n");
+	fclose(fp1);
+	fclose(fp2);
+}
